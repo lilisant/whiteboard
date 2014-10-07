@@ -1,0 +1,82 @@
+/* Space out content a bit */
+body {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+/* Everything but the jumbotron gets side spacing for mobile first views */
+.header,
+.marketing,
+.footer {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* Make the masthead heading the same height as the navigation */
+.postit{
+   float:left;
+  width: 250px;
+  height: 310px;
+  border: 1px black solid;
+  border-radius: 5px;
+  padding: 0;
+  padding-left: 5px;
+  margin:15px 10px auto 4px;
+  box-shadow: 5px 5px 5px #888888;
+  background-position:0px 0px;
+  list-style-type: none;
+  overflow: scroll;
+}
+.field {
+  font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+  font-size: 10px;
+  overflow: scroll;
+}
+.input-group-btn{
+  padding-top: 12px;
+}
+.title {
+  text-align: center;
+}
+.header h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+  /*line-height: 40px;*/
+  /*padding-bottom: 19px;*/
+}
+/* Custom page footer */
+.footer {
+  padding-top: 19px;
+  color: #777;
+  border-top: 1px solid #e5e5e5;
+}
+.jumbotron {
+  text-align: center;
+}
+/*.jumbotron .btn {
+  font-size: 21px;
+  padding: 14px;
+}*/
+
+/* Supporting marketing content */
+.marketing {
+  margin: 40px 0;
+}
+.marketing p + h4 {
+  margin-top: 28px;
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+  /* Remove the padding we set earlier */
+  .header,
+  .marketing,
+  .footer {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* Space out the masthead */
+  .header {
+    margin-bottom: 30px;
+  }
+}
