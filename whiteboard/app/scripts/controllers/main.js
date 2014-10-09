@@ -8,19 +8,16 @@
  * Controller of the whiteboardApp
  */
 angular.module('whiteboardApp')
-	.controller('MainCtrl', function ($scope, $timeout, wbservice) {
+	.controller('MainCtrl', function ($scope, wbservice) {
 		$scope.tit = '';
 		$scope.items = [];
-		//wbservice.getAll();
 		$scope.$watch('text', function () {});
 		$scope.$on('ws-message', function (event, serverArray) {
 			$scope.items = serverArray;
 			$scope.$apply();
-			console.log('nuevo items');
-			console.log($scope.items);
 		});
-		$timeout(function () {
+		$scope.$on('ws-open', function () {
+			console.log('open');
 			wbservice.getAll();
-		}, 1000);
-
+		});
 	});

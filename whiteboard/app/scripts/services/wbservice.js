@@ -22,6 +22,7 @@ angular.module('whiteboardApp').factory('wbservice', ['$q', '$rootScope',
       console.log('Socket has been opened!');
       console.log('connected' + message);
       open = true;
+      $rootScope.$broadcast('ws-open');
     };
 
     ws.onmessage = function (message) {
@@ -55,7 +56,6 @@ angular.module('whiteboardApp').factory('wbservice', ['$q', '$rootScope',
     };
 
     Service.getAll = function () {
-      //return $http.get(url);
       var request = {
         'type': 'getAll',
         'data': null
